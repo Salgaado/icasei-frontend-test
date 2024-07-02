@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+iframe {
+  flex-grow: 1;
+}
+
+#favorites-count {
+  padding: 10px;
+  background: #f0f0f0;
+}

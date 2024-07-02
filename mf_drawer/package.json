@@ -1,0 +1,12 @@
+{
+  "name": "mf_drawer",
+  "version": "1.0.0",
+  "description": "Micro front-end drawer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
