@@ -10,12 +10,15 @@
   <div class="drawer">
     <nav>
       <ul>
-        <li><a href="/videos" target="content-frame">VÍDEOS</a></li>
-        <li><a href="/favorites" target="content-frame">FAVORITOS</a></li>
+        <li><a href="/videos" target="">VÍDEOS</a></li>
+        <li><a href="/favorites" target="">FAVORITOS</a></li>
       </ul>
     </nav>
-    <iframe name="content-frame"></iframe>
-    <div id="favorites-count">Favoritos: 0</div>
+    <div>
+      <iframe src="http://localhost:3002" name="content-frame"></iframe>
+      <div id="favorites-count">Favoritos: 0</div>
+    </div>
+    
   </div>
   <script src="app.js"></script>
 </body>

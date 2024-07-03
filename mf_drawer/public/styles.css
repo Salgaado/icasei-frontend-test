@@ -4,8 +4,7 @@ body {
 
 .drawer {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+
 }
 
 nav ul {

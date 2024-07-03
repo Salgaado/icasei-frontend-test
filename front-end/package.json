@@ -1,0 +1,12 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "Micro front-end",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
