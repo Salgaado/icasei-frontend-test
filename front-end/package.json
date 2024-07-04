@@ -4,9 +4,12 @@
   "description": "Micro front-end",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon -L --inspect=0.0.0.0 server.js"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }

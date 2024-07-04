@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.videos {
+  padding: 20px;
+}
+
+
+.video {
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  border: 1px solid #fff;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.video img {
+  display: none;
+}
+
+.video h3 {
+  font-size: 1.2em;
+}
+
+.video p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.favorite {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #f39c12;
+  text-align: center;
+}
+
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+

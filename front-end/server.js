@@ -2,12 +2,14 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+const port = 8080;
+
+app.use(express.static(path.join(__dirname, '.')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '.', 'index.html'));
 });
 
-app.listen(3003, () => {
-  console.log('Aplicativo Drawer ouvindo na porta 3003');
+app.listen(port, () => {
+  console.log('Aplicativo Drawer ouvindo na porta ' + port);
 });

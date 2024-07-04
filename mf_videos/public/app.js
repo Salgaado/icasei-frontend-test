@@ -1,5 +1,7 @@
+let favorites = [];
 async function searchVideos() {
   const query = document.getElementById('search-input').value;
+  if (!query) return;
   try {
     const response = await fetch('http://localhost:3000/search', {
       method: 'POST',
@@ -21,7 +23,7 @@ async function searchVideos() {
 
 function displayResults(videos) {
   const results = document.getElementById('results');
-  results.innerHTML = ''; 
+  results.innerHTML = '';
   videos.forEach(video => {
     const videoElement = document.createElement('div');
     videoElement.className = 'video';
@@ -30,40 +32,32 @@ function displayResults(videos) {
       <h3>${video.title}</h3>
       <p>${video.description}</p>
       <iframe src="https://www.youtube.com/embed/${video.id}" frameborder="0" allowfullscreen></iframe>
-      <div class="favorite" onclick="toggleFavorite('${video.id}')">☆</div>
+      <div class="favorite" onclick="toggleFavorite({
+        'id': '${video.id}',
+        'title': '${video.title}',
+        'description': '${video.description}',
+        'thumbnail': '${video.thumbnail}'
+      })">☆</div>
     `;
     results.appendChild(videoElement);
   });
 }
 
-async function toggleFavorite(videoId) {
+async function toggleFavorite(videoData) {
   try {
-    const response = await fetch('http://localhost:3000/favorite', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ videoId }),
-      credentials: 'include'
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    updateFavoritesCount();
+    window.parent.postMessage({videoData: videoData, type: 'toggleFavorite'}, '*');
   } catch (error) {
     console.error('Erro ao favoritar o vídeo:', error);
   }
 }
 
-async function updateFavoritesCount() {
-  try {
-    const response = await fetch('http://localhost:3000/favorites', { credentials: 'include' });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    document.getElementById('favorites-count').innerText = `Favoritos: ${data.favorites.length}`;
-  } catch (error) {
-    console.error('Erro ao atualizar a contagem de favoritos:', error);
-  }
-}
+window.addEventListener('message', (event) => {
+  const parentPath = event.data.currentPath;
+  if (event.data.type == 'favorites') favorites = event.data.favorites;
+
+  if (parentPath === '/videos')
+    searchVideos();
+
+  if (parentPath === '/favorites')
+    displayResults(favorites);
+});

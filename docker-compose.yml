@@ -1,13 +1,23 @@
 version: '3'
 services:
+  front-end: 
+    build: ./front-end/
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./front-end:/app"
   mf_drawer:
     build: ./mf_drawer
     ports:
       - "3001:3001"
+    volumes:
+      - "./mf_drawer:/app"
   mf_videos:
     build: ./mf_videos
     ports:
       - "3002:3002"
+    volumes:
+      - "./mf_videos:/app"
   bff:
     build: ./bff
     ports:
