@@ -54,7 +54,8 @@ Este repositório contém um projeto com múltiplos componentes, incluindo um Ba
 
 ## Estrutura do Diretório
 ICASEI-FRONTEND-TEST/
-![image](https://github.com/Salgaado/icasei-frontend-test/assets/88348530/7a0623db-a2d6-4b30-99eb-2ee8d2dbe9e2)
+![image](https://github.com/Salgaado/icasei-frontend-test/assets/88348530/5e73e37e-fe9c-4fdc-abec-4dc302af33e0)
+
 
 
 
