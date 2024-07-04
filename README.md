@@ -54,49 +54,8 @@ Este repositório contém um projeto com múltiplos componentes, incluindo um Ba
 
 ## Estrutura do Diretório
 ICASEI-FRONTEND-TEST/
-├── bff/
-│   ├── node_modules/
-│   ├── tests/
-│   ├── Dockerfile
-│   ├── package-lock.json
-│   ├── package.json
-│   └── server.js
-├── front-end/
-│   ├── node_modules/
-│   ├── app.js
-│   ├── public/
-│   │   └── index.html
-│   ├── Dockerfile
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── server.js
-│   ├── styles.css
-│   └── yarn.lock
-├── mf_drawer/
-│   ├── node_modules/
-│   ├── public/
-│   │   ├── Dockerfile
-│   │   ├── package-lock.json
-│   │   ├── package.json
-│   │   └── server.js
-│   └── yarn.lock
-├── mf_videos/
-│   ├── node_modules/
-│   ├── public/
-│   │   ├── app.js
-│   │   ├── index.html
-│   │   ├── styles.css
-│   │   ├── Dockerfile
-│   │   ├── package-lock.json
-│   │   ├── package.json
-│   │   └── server.js
-│   └── yarn.lock
-├── node_modules/
-├── .env
-├── docker-compose.yml
-├── package-lock.json
-├── package.json
-└── README.md
+![image](https://github.com/Salgaado/icasei-frontend-test/assets/88348530/7a0623db-a2d6-4b30-99eb-2ee8d2dbe9e2)
+
 
 
 ### Em atualização...
