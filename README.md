@@ -53,7 +53,6 @@ Este projeto é uma aplicação micro-frontend composta por dois componentes pri
 Este repositório contém um projeto com múltiplos componentes, incluindo um Backend for Frontend (BFF), front-end principal e microfrontends. Abaixo está a estrutura detalhada do diretório e uma breve descrição de cada parte.
 
 ## Estrutura do Diretório
-ICASEI-FRONTEND-TEST/
 ![image](https://github.com/Salgaado/icasei-frontend-test/assets/88348530/5e73e37e-fe9c-4fdc-abec-4dc302af33e0)
 
 
